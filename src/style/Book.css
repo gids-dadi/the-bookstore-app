@@ -5,11 +5,11 @@
 }
 
 .book-container h1 {
- margin-left: 10%;
- background-color: #c5b19d;
- margin-top: 10px;
- width: fit-content;
- padding: 10px;
+  margin-left: 10%;
+  background-color: #c5b19d;
+  margin-top: 10px;
+  width: fit-content;
+  padding: 10px;
 }
 
 .book button {

@@ -4,7 +4,7 @@ import '../style/Categories.css';
 function Categories() {
   return (
     <div>
-      <button type='submit'>Check Status</button>
+      <button type="submit">Check Status</button>
     </div>
   );
 }

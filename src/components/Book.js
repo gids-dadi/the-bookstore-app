@@ -5,10 +5,10 @@ function Book(props) {
   const { items } = props;
 
   return (
-    <div className='book-container'>
+    <div className="book-container">
       <h1>Stored Books</h1>
       {items.map((book) => (
-        <div className='book' key={book.id}>
+        <div className="book" key={book.id}>
           &quot;
           {book.title}
           &quot; by &nbsp;

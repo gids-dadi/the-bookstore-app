@@ -23,8 +23,8 @@ function Books() {
   ];
 
   return (
-    <section className='main'>
-      
+    <section className="main">
+
       <Form />
       <Book items={bookList} />
     </section>
