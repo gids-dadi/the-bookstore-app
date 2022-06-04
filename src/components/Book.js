@@ -6,15 +6,15 @@ function Book(props) {
   const { items } = props;
 
   return (
-    <div className='book-container'>
+    <div className="book-container">
       <h1>Stored Books</h1>
       {items.map((book) => (
-        <div className='book' key={book.id}>
+        <div className="book" key={book.id}>
           &quot;
           {book.title}
           &quot; by &nbsp;
           {book.author}
-          <button type='button'>Remove</button>
+          <button type="button">Remove</button>
         </div>
       ))}
     </div>
@@ -22,7 +22,7 @@ function Book(props) {
 }
 
 Book.propTypes = {
-  data: PropTypes.isRequired,
+  items: PropTypes.isRequired,
 };
 
 export default Book;
