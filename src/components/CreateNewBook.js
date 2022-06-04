@@ -7,14 +7,14 @@ function CreateNewBook() {
       {' '}
       <>
         <h2>Add A Book</h2>
-        <form className='form'>
-          <input className='title' type='text' placeholder='Enter book title' />
+        <form className="form">
+          <input className="title" type="text" placeholder="Enter book title" />
           <input
-            className='author'
-            type='text'
-            placeholder='Enter book author'
+            className="author"
+            type="text"
+            placeholder="Enter book author"
           />
-          <button type='submit'>Add Book</button>
+          <button type="submit">Add Book</button>
         </form>
       </>
     </div>
