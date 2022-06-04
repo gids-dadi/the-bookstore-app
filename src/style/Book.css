@@ -1,0 +1,19 @@
+.book {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 1.2rem;
+}
+
+.book-container h1 {
+  margin-left: 10%;
+  background-color: #c5b19d;
+  margin-top: 10px;
+  width: fit-content;
+  padding: 10px;
+}
+
+.book button {
+  padding: 8px;
+  background-color: #c5b19d;
+  margin-left: 1.1rem;
+}
