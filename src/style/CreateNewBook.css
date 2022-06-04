@@ -1,11 +1,12 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  align-items: left;
+  width: 80%;
 }
 
 .form input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   margin: 5px;
   border: 2px solid black;
@@ -13,6 +14,7 @@
 
 .form button {
   width: 80px;
-  padding: 0.5rem;
-  align-self: flex-end;
+  margin-right: 5px;
+  align-self: center;
+  border: 2px solid black;
 }
