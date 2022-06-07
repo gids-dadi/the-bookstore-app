@@ -1,28 +1,22 @@
 import React from 'react';
-import { Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavBar from './components/Navbar';
 import Books from './components/Books';
 import Categories from './components/Categories';
+import NotFound from './components/NotFound';
 import './App.css';
 
-function App() {
-  return (
-    <>
-      <nav className="navbar">
-        <a href="/" className="logo">
-          BookStore
-        </a>
-
-        <div className="navigation">
-          <Link to="/">Books</Link>
-          <Link to="/categories">Categories</Link>
-        </div>
-      </nav>
+const App = () => (
+  <Router>
+    <NavBar />
+    <section className='content'>
       <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
+        <Route path='/bookstore' element={<Books />} />
+        <Route path='/categories' element={<Categories />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
-    </>
-  );
-}
+    </section>
+  </Router>
+);
 
 export default App;
