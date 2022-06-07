@@ -9,11 +9,11 @@ import './App.css';
 const App = () => (
   <Router>
     <NavBar />
-    <section className='content'>
+    <section className="content">
       <Routes>
-        <Route path='/bookstore' element={<Books />} />
-        <Route path='/categories' element={<Categories />} />
-        <Route path='/*' element={<NotFound />} />
+        <Route path="/bookstore" element={<Books />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </section>
   </Router>

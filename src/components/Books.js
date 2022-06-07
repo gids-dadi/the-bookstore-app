@@ -6,27 +6,9 @@ import '../style/Books.css';
 const Books = () => {
   const bookList = useSelector((state) => state.booksReducer);
 
-  // [
-  //   {
-  //     id: 1,
-  //     title: 'War and Peace',
-  //     author: 'Leo Tolstoy',
-  //   },
-  //   {
-  //     id: 2,
-  //     title: 'Middlemarch',
-  //     author: 'George Eliot',
-  //   },
-  //   {
-  //     id: 3,
-  //     title: 'The Adventures of Huckleberry Finn',
-  //     author: 'Mark Twain',
-  //   },
-  // ];
-
   return (
-    <section className='book-list-container'>
-      <section className='book-list'>
+    <section className="book-list-container">
+      <section className="book-list">
         {bookList.map((book) => (
           <Book
             key={book.id}

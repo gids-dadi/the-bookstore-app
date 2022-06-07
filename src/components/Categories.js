@@ -2,9 +2,11 @@ import React from 'react';
 import '../style/Categories.css';
 
 const Categories = () => (
-  <section className='categories-container'>
+  <section className="categories-container">
     <span>
-      5<span>0</span>3
+      5
+      <span>0</span>
+      3
     </span>
     <h1>Under construction</h1>
   </section>

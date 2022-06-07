@@ -6,14 +6,14 @@ const NavBar = () => (
   <nav>
     <ul>
       <li>
-        <NavLink className='logo' to='/bookstore'>
+        <NavLink className="logo" to="/bookstore">
           Bookstore CMS
         </NavLink>
       </li>
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
-          to='/bookstore'
+          to="/bookstore"
         >
           BOOKS
         </NavLink>
@@ -21,7 +21,7 @@ const NavBar = () => (
       <li>
         <NavLink
           className={({ isActive }) => (isActive ? 'active' : '')}
-          to='/Categories'
+          to="/Categories"
         >
           CATEGORIES
         </NavLink>

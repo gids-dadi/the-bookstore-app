@@ -39,35 +39,35 @@ const CreateNewBook = () => {
 
   return (
     <div>
-      <form onSubmit={submitBookToStore} className='form-container'>
+      <form onSubmit={submitBookToStore} className="form-container">
         <h1>ADD NEW BOOK</h1>
-        <div className='form-inputs'>
+        <div className="form-inputs">
           <input
-            name='title'
-            type='text'
+            name="title"
+            type="text"
             onChange={handleChange}
-            placeholder='Book Title'
+            placeholder="Book Title"
             required
           />
           <input
-            name='author'
-            type='text'
+            name="author"
+            type="text"
             onChange={handleChange}
-            placeholder='Book Author'
+            placeholder="Book Author"
             required
           />
           <select
-            name='category'
-            id='categories'
+            name="category"
+            id="categories"
             onChange={handleChange}
             required
           >
-            <option value=''>Select a category</option>
-            <option value='Category 1'>Category 1</option>
-            <option value='Category 2'>Category 2</option>
-            <option value='Category 3'>Category 3</option>
+            <option value="">Select a category</option>
+            <option value="Category 1">Category 1</option>
+            <option value="Category 2">Category 2</option>
+            <option value="Category 3">Category 3</option>
           </select>
-          <button type='submit'>ADD BOOK</button>
+          <button type="submit">ADD BOOK</button>
         </div>
       </form>
     </div>
