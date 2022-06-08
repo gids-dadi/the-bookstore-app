@@ -7,8 +7,9 @@ const Books = () => {
   const bookList = useSelector((state) => state.booksReducer);
 
   return (
-    <section className="book-list-container">
-      <section className="book-list">
+    <section className='book-list-container'>
+      <Form />
+      <section className='book-list'>
         {bookList.map((book) => (
           <Book
             key={book.id}
@@ -19,7 +20,6 @@ const Books = () => {
           />
         ))}
       </section>
-      <Form />
     </section>
   );
 };
