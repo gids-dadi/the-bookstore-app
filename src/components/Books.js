@@ -8,6 +8,7 @@ const Books = () => {
 
   return (
     <section className="book-list-container">
+      <Form />
       <section className="book-list">
         {bookList.map((book) => (
           <Book
@@ -19,7 +20,6 @@ const Books = () => {
           />
         ))}
       </section>
-      <Form />
     </section>
   );
 };
