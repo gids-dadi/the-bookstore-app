@@ -1,7 +1,17 @@
 .book {
   font-size: 25px;
   font-weight: bold;
-  margin: 1.2rem;
+  margin: 3.2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+
+.info h2 {
+  margin-right: 25px;
 }
 
 .book-container h1 {

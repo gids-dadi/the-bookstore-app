@@ -1,12 +1,15 @@
 import React from 'react';
 import '../style/Categories.css';
 
-function Categories() {
-  return (
-    <div>
-      <button type="submit">Check Status</button>
-    </div>
-  );
-}
+const Categories = () => (
+  <section className="categories-container">
+    <span>
+      5
+      <span>0</span>
+      3
+    </span>
+    <h1>Under construction</h1>
+  </section>
+);
 
 export default Categories;
