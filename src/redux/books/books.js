@@ -1,10 +1,11 @@
 // CONST
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const url = "https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Hl4yLDMGWXmdUiWmf3ct/books";
+const GET_BOOK = 'bookStore/books/GET_BOOK';
 
-const initialState = []
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/Hl4yLDMGWXmdUiWmf3ct/books';
 
+const initialState = [];
 
 // Reducer
 const booksReducer = (state = initialState, action) => {
@@ -15,8 +16,8 @@ const booksReducer = (state = initialState, action) => {
     case REMOVE_BOOK:
       return state.filter((book) => book.id !== action.id);
 
-      case GET_BOOK:
-          return [...state, action.payload]
+    case GET_BOOK:
+      return [...state, action.payload];
 
     default:
       return state;
@@ -25,12 +26,11 @@ const booksReducer = (state = initialState, action) => {
 
 // Action Creators
 export const addBook = (payload) => ({
+
   type: ADD_BOOK,
-  // payload,
-  id
+  payload,
+  // id
 });
-
-
 
 export const sentBook = (payload) => (
   async (dispatch) => {
@@ -38,6 +38,7 @@ export const sentBook = (payload) => (
       method: 'POST',
       body: JSON.stringify({
         item_id: payload.id,
+
         title: {
           bookTitle: payload.title,
           bookAuthor: payload.author,
@@ -52,6 +53,10 @@ export const sentBook = (payload) => (
   }
 );
 
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
 
 export const deleteBook = (id) => (
   async (dispatch) => {
@@ -70,15 +75,14 @@ export const deleteBook = (id) => (
   }
 );
 
-// export const removeBook = (id) => ({
-//   type: REMOVE_BOOK,
-//   id,
-// });
-
 export const getBook = async (dispatch) => {
   const response = await fetch(url);
+
   const data = await response.json();
+
   const books = Object.entries(data);
+  // console.log(books);
+
   books.forEach((item) => {
     const [id, value] = item;
     const { title, category } = value[0];
