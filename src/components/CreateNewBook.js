@@ -76,7 +76,9 @@ const CreateNewBook = () => {
             <option value="">Select a category</option>
             {/* {' '} */}
             {
-                   catArr.map((category) => (<option key={category} value={category}>{category}</option>))
+                   catArr.map((category) => (<option key={category} value={category}>{category}
+                   
+                </option>))
             }
 
           </select>
