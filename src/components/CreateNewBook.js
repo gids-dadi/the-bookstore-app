@@ -37,7 +37,7 @@ const CreateNewBook = () => {
     dispatch(sentBook(newBook));
   };
 
-  const categoriesArr = [
+  const catArr = [
     'Contemporary',
     'Dystopian',
     'Fantasy',
@@ -76,7 +76,7 @@ const CreateNewBook = () => {
             <option value="">Select a category</option>
             {/* {' '} */}
             {
-                   categoriesArr.map((category) => (<option key={category} value={category}>{category}</option>))
+                   catArr.map((category) => (<option key={category} value={category}>{category}</option>))
             }
 
           </select>

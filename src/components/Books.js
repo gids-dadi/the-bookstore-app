@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './CreateNewBook';
-import booksReducer from '../redux/books/books';
 import '../style/Books.css';
 
 const Books = () => {
