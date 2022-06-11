@@ -36,11 +36,6 @@ export const sentBook = (payload) => async (dispatch) => {
       item_id: payload.id,
       title: payload.title,
       author: payload.author,
-
-      // title: {
-      //   bookTitle: payload.title,
-      //   bookAuthor: payload.author,
-      // },
       category: payload.category,
     }),
     headers: {

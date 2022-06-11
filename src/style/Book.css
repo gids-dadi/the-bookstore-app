@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   border: 1px solid #ddd;
-  /* padding: 2rem; */
 }
 
 .book-container span {
