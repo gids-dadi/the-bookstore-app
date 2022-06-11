@@ -1,4 +1,17 @@
-.main {
+.book-list-container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  /* padding: 1rem 6rem; */
+  gap: 1rem;
+}
+
+.book-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
 }

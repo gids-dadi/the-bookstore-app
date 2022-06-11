@@ -1,19 +1,57 @@
-.form {
+.form-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 80%;
+  gap: 1rem;
+  border-top: solid 1px #ddd;
 }
 
-.form input {
-  width: 80%;
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid black;
+.form-container h1 {
+  font-size: 1.5rem;
+  color: #555;
 }
 
-.form button {
-  width: 80px;
-  margin-right: 5px;
-  align-self: center;
-  border: 2px solid black;
+.form-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-inputs input,
+.form-inputs select {
+  background-color: #fff;
+  color: #444;
+  padding: 0.4rem;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+.form-inputs input {
+  width: 30%;
+}
+
+.form-inputs select {
+  width: 22%;
+}
+
+::placeholder {
+  color: grey;
+}
+
+.btn-b-solid {
+  width: 10%;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-b-solid:hover {
+  background-color: #72bfff;
+  color: #fff;
+}
+
+.btn-b-solid:active {
+  background-color: #0290ff;
+  color: #fff;
 }

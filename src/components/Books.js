@@ -8,7 +8,6 @@ const Books = () => {
 
   return (
     <section className="book-list-container">
-      <CreateNewBook />
       <section className="book-list">
         {bookList.map((book) => (
           <Book
@@ -19,6 +18,7 @@ const Books = () => {
             categories={book.category}
           />
         ))}
+        <CreateNewBook />
       </section>
     </section>
   );
