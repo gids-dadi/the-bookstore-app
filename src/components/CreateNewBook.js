@@ -31,13 +31,13 @@ const CreateNewBook = () => {
       id: uuidv4(),
       title: formState.title[0],
       author: formState.author[0],
-      category: formState.author[0],
+      category: formState.category[0],
     };
 
     dispatch(sentBook(newBook));
   };
 
-  const catArr = [
+  const categoriesArr = [
     'Contemporary',
     'Dystopian',
     'Fantasy',
@@ -75,15 +75,11 @@ const CreateNewBook = () => {
           >
             <option value="">Select a category</option>
             {/* {' '} */}
-            {
-                   catArr.map((category) => (
-                     <option key={category} value={category}>
-                       {category}
-
-                     </option>
-                   ))
-            }
-
+            {categoriesArr.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
           </select>
 
           <button type="submit">ADD BOOK</button>

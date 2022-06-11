@@ -1,4 +1,3 @@
-// CONST
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOK = 'bookStore/books/GET_BOOK';
@@ -26,10 +25,8 @@ const booksReducer = (state = initialState, action) => {
 
 // Action Creators
 export const addBook = (payload) => ({
-
   type: ADD_BOOK,
   payload,
-  // id
 });
 
 export const sentBook = (payload) => (
@@ -38,11 +35,13 @@ export const sentBook = (payload) => (
       method: 'POST',
       body: JSON.stringify({
         item_id: payload.id,
+        title: payload.title,
+        author: payload.author,
 
-        title: {
-          bookTitle: payload.title,
-          bookAuthor: payload.author,
-        },
+        // title: {
+        //   bookTitle: payload.title,
+        //   bookAuthor: payload.author,
+        // },
         category: payload.category,
       }),
       headers: {
@@ -77,12 +76,8 @@ export const deleteBook = (id) => (
 
 export const getBook = async (dispatch) => {
   const response = await fetch(url);
-
   const data = await response.json();
-
   const books = Object.entries(data);
-  // console.log(books);
-
   books.forEach((item) => {
     const [id, value] = item;
     const { title, category } = value[0];

@@ -1,7 +1,7 @@
 .book {
   font-size: 25px;
   font-weight: bold;
-  margin: 3.2rem;
+  /* margin: 3.2rem; */
 }
 
 .info {
@@ -23,7 +23,7 @@
 }
 
 .book button {
-  padding: 8px;
-  background-color: #c5b19d;
-  margin-left: 1.1rem;
+  /* padding: 8px; */
+  /* background-color: #c5b19d; */
+  /* margin-left: 1.1rem; */
 }
