@@ -29,50 +29,46 @@ export const addBook = (payload) => ({
   payload,
 });
 
-export const sentBook = (payload) => (
-  async (dispatch) => {
-    await fetch(url, {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: payload.id,
-        title: payload.title,
-        author: payload.author,
+export const sentBook = (payload) => async (dispatch) => {
+  await fetch(url, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: payload.id,
+      title: payload.title,
+      author: payload.author,
 
-        // title: {
-        //   bookTitle: payload.title,
-        //   bookAuthor: payload.author,
-        // },
-        category: payload.category,
-      }),
-      headers: {
-        'Content-type': 'application/JSON',
-      },
-    });
-    dispatch(addBook(payload));
-  }
-);
+      // title: {
+      //   bookTitle: payload.title,
+      //   bookAuthor: payload.author,
+      // },
+      category: payload.category,
+    }),
+    headers: {
+      'Content-type': 'application/JSON',
+    },
+  });
+  dispatch(addBook(payload));
+};
 
 export const removeBook = (id) => ({
   type: REMOVE_BOOK,
   id,
 });
 
-export const deleteBook = (id) => (
-  async (dispatch) => {
-    const response = await fetch(`${url}/${id}`, {
-      method: 'DELETE',
-      body: JSON.stringify({
-        item_id: id,
-      }),
-      headers: {
-        'Content-type': 'application/JSON',
-      },
-    });
-    if (response.status === 201) {
-      dispatch(removeBook(id));
-    }
+export const deleteBook = (id) => async (dispatch) => {
+  const response = await fetch(`${url}/${id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({
+      item_id: id,
+    }),
+    headers: {
+      'Content-type': 'application/JSON',
+    },
+  });
+  if (response.status === 201) {
+    dispatch(removeBook(id));
   }
-);
+};
 
 export const getBook = async (dispatch) => {
   const response = await fetch(url);

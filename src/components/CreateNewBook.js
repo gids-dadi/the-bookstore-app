@@ -29,9 +29,9 @@ const CreateNewBook = () => {
 
     const newBook = {
       id: uuidv4(),
-      title: formState.title[0],
-      author: formState.author[0],
-      category: formState.category[0],
+      title: formState.title,
+      author: formState.author,
+      category: formState.category,
     };
 
     dispatch(sentBook(newBook));
@@ -74,7 +74,6 @@ const CreateNewBook = () => {
             required
           >
             <option value="">Select a category</option>
-            {/* {' '} */}
             {categoriesArr.map((category) => (
               <option key={category} value={category}>
                 {category}
