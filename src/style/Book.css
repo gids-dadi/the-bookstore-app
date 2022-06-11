@@ -43,6 +43,8 @@
 
 .block-l .btn-container {
   font-family: 'Roboto Slab', serif;
+  width: 100%;
+  display: flex;
 }
 
 .block-l button {

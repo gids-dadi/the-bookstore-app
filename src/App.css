@@ -3,12 +3,12 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #bab9b9;
-  /* align-items: center; */
+  background-color: #eeeeee;
 }
+
 .content {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-self: center;
