@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { sentBook } from '../redux/books/books';
 
 import '../style/CreateNewBook.css';
 
@@ -29,13 +29,24 @@ const CreateNewBook = () => {
 
     const newBook = {
       id: uuidv4(),
-      title: formState.title[0],
-      author: formState.author[0],
-      category: formState.author[0],
+      title: formState.title,
+      author: formState.author,
+      category: formState.category,
     };
 
-    dispatch(addBook(newBook));
+    dispatch(sentBook(newBook));
   };
+
+  const categoriesArr = [
+    'Contemporary',
+    'Dystopian',
+    'Fantasy',
+    'Mystery',
+    'Romance',
+    'Sci-Fi',
+    'Thriller',
+    'Westerns',
+  ];
 
   return (
     <div>
@@ -63,10 +74,13 @@ const CreateNewBook = () => {
             required
           >
             <option value="">Select a category</option>
-            <option value="Category 1">Category 1</option>
-            <option value="Category 2">Category 2</option>
-            <option value="Category 3">Category 3</option>
+            {categoriesArr.map((category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            ))}
           </select>
+
           <button type="submit">ADD BOOK</button>
         </div>
       </form>
