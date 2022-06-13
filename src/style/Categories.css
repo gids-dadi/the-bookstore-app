@@ -1,6 +1,17 @@
-/* button {
-  margin: 45px;
-  width: 100px;
-  padding: 0.5rem;
-  align-self: flex-end;
-} */
+.categories-container {
+  height: 100%;
+  text-align: center;
+}
+
+.categories-container span {
+  font-size: 10rem;
+  color: #555;
+}
+
+.categories-container span span {
+  color: #0290ff;
+}
+
+.categories-container h1 {
+  font-size: 2rem;
+}

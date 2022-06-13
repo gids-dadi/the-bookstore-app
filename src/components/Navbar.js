@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import '../style/Navbar.css';
-// import user from '../img/user.svg';
+import user from '../img/user.svg';
 
 const NavBar = () => (
   <nav>
@@ -27,6 +27,14 @@ const NavBar = () => (
         </NavLink>
       </li>
     </ul>
+    <NavLink
+      className={({ isActive }) => (isActive ? 'active' : '')}
+      to="/bookstore"
+    >
+      <figure>
+        <img className="user-icon" alt="User settings" src={user} />
+      </figure>
+    </NavLink>
   </nav>
 );
 
